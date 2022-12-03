@@ -1,25 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-        x:Class="MauiBugTest.MainPage"
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+		x:Class="MauiBugTest.MainPage"
 	xmlns:local="clr-namespace:MauiBugTest">
 	<ScrollView>
 		<VerticalStackLayout
-            Spacing="25"
-            Padding="30,0"
-            VerticalOptions="Center">
+			Spacing="25"
+			Padding="30,0"
+			VerticalOptions="Center">
 			<Button
-                x:Name="ReloadButton"
-                Text="Reload"
-                Clicked="ReloadButton_Clicked"
-                HorizontalOptions="Center" />
+				x:Name="ReloadButton"
+				Text="Reload"
+				Clicked="ReloadButton_Clicked"
+				HorizontalOptions="Center" />
 			<Button
-                x:Name="CounterBtn"
-                Text="Click me"
-                Clicked="OnCounterClicked"
-                HorizontalOptions="Center" />
-
-			<CarouselView x:Name="DataView" BackgroundColor="Purple">
+				x:Name="CounterBtn"
+				Text="Click me"
+				Clicked="OnCounterClicked"
+				HorizontalOptions="Center" />
+																	<!--The workaround-->
+			<CarouselView x:Name="DataView" BackgroundColor="Purple" HeightRequest="20">
 				<CarouselView.ItemTemplate>
 					<DataTemplate>
 						<Label Text="{Binding .}" BackgroundColor="Red"/>
