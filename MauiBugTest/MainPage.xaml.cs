@@ -2,8 +2,6 @@
 
 namespace MauiBugTest;
 
-public record LoadingData(bool Loading, string Message);
-
 public partial class MainPage : ContentPage
 {
 	ObservableCollection<string> Data { get; set; } = new ObservableCollection<string>();
@@ -23,7 +21,8 @@ public partial class MainPage : ContentPage
 			{
 				Data.Add($"{i:X}");
 			}
-		}else
+		}
+		else
 		{
 			Data.Clear();
 		}
